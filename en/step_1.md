@@ -1,58 +1,81 @@
-## Introduction
 
-Add project description here. What will learners be making?
+--- task ---
 
-### What you will make
+If you do not already have an account, navigate to https://io.adafruit.com/ and choose to sign up using the free option. Then fill out the form to create an account. Navigating back to https://io.adafruit.com/ main page
 
---- no-print ---
-Add instructions for using the embedded content here.
+--- /task ---
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
---- /no-print ---
+--- task ---
 
---- print-only ---
-![Complete project](images/showcase_static.png)
---- /print-only ---
+Create a new feed by clicking on **Feeds** and selecting **view all** Create a new Feed by clicking on **Actions** and then **Create a New Feed**. Give your feed a name and description.
 
---- collapse ---
----
-title: What you will need
----
-### Hardware
+![image showing options to select viewing of feeds](images/feeds.png)
+![image showing options to create a new feed after clicking on actions](images/new_feed.png)
 
-+ Describe hardware here
+--- /task ---
 
-### Software
+--- task ---
 
-+ Scratch 2.0 (either [online](http://rpf.io/scratchon) or [offline](http://rpf.io/scratchoff))
-+ Python 3
-+ This project can be completed in a web browser using [trinket.io](https://trinket.io/)
+Click on the icon to reveal **You secret AIO key**. You need the **scripting** constants, which will look something like:
 
-### Downloads
+```python
+ADAFRUIT_IO_USERNAME = "your_username"
+ADAFRUIT_IO_KEY = "aio_with_random_string"
+```
 
-+ [rpf.io/project-name-go](http://rpf.io/project-name-go){:target="_blank"}
+--- /task ---
 
---- /collapse ---
+--- task ---
 
---- collapse ---
----
-title: What you will learn
----
+You need to install the `adafruit-io` python library
 
-+ Two or three learning objectives
-+ ...should go here
+```bash
+sudo pip3 install adafruit-io
+```
 
---- /collapse ---
+--- /task ---
 
---- collapse ---
----
-title: Additional information for educators
----
+--- task ---
 
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/project-name/print){:target="_blank"}.
+In your prefered Python IDE or texteditor, import the library and add in your credentials
 
-[Here is a link to the resources for this project](http://rpf.io/project-name-go).
+```python
+from Adafruit_IO import Client
+aio = Client('ADAFRUIT_IO_USERNAME', 'ADAFRUIT_IO_KEY')
+```
 
---- /collapse ---
+--- /task ---
+
+--- task ---
+
+You can send data to your feed using the `aio.send()` method. Your key can be viewed in the table of all fields.
+
+![table showing all the feeds with the key visible](images/feed_key.png)
+
+```python
+aio.send('key_of_feed', data_to_send)
+```
+
+--- /task ---
+
+--- task ---
+
+As you send data, it will be viewable when you click on the field you created.
+
+![graph from Adafruit IO showing the feed data](images/feed_data.png)
+
+--- /task ---
+
+--- task ---
+
+You can optionally create a dashboard to better display the feed, and additionally share the feed with others.
+
+Have a look at the Adafruit guides for more information - https://learn.adafruit.com/series/adafruit-io-basics
+
+--- /task ---
+
+
+
+
+
+
