@@ -1,8 +1,5 @@
-
 --- task ---
-
 If you do not already have an account, navigate to https://io.adafruit.com/ and choose to sign up using the free option. Then fill out the form to create an account. Navigating back to https://io.adafruit.com/ main page
-
 --- /task ---
 
 --- task ---
