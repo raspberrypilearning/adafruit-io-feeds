@@ -1,0 +1,10 @@
+title: Adafruit IO
+hero_image: images/banner.png
+description: adafruit-io description
+version: 4
+listed: false
+copyedit: false
+last_tested: "2020-01-29"
+steps:
+  - title: Introduction
+
